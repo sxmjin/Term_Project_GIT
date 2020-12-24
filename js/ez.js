@@ -19,8 +19,8 @@ $(function () {
   })
 
   /*轮播切换 */
-  //默认后面两个轮播隐藏
-  $('.ez-banner:gt(0)').hide()
+  // 默认后面两个轮播隐藏
+      $('.ez-banner:gt(0)').hide()
   //给导航绑定点击事件
   $('.ez-title ul li').on('mouseenter', function () {
     //导航切换
@@ -33,7 +33,7 @@ $(function () {
   })
 
 
-  /*换一批*/
+  /*换一批
   //定义一个索引
   //上下滑动
     var index= 0;
@@ -48,25 +48,25 @@ $(function () {
           top: -index * 500
         })
       })
-/*
+*/
   //左右滑动
   var index = 0;
   $('.change').click(function () {
 
     //自增
-    index++;
-    console.log('1:', index)
-    //边界判断
+    index++; 
 
+   
+    //边界判断
     //让里面 的 inner-box 运动
-    $('.inner-box').stop(true).animate({
-      left: -index * 1200
+    $('.inner-box').stop(true).animate({ left: -index * 1200
     }, function () {
-      if (index === 3) {
+     // console.log(index)
+      if (index > 2) {
         index = 0;
+       // $('.inner-box').css('left', 0);
         $('.inner-box').css('left', 0);
       }
     })
-
-  })*/
+  })
 })
